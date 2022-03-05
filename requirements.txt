@@ -1,4 +1,4 @@
 numpy
 pandas
-tensorflow
+tensorflow==1.7.0
 streamlit
