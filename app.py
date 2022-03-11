@@ -59,7 +59,6 @@ if uploaded_file is not None:
 
  anomalous_train_data = train_data[~train_labels]
  anomalous_test_data = test_data[~test_labels]
- st.line_chart(dataframe)
 
  class AnomalyDetector(Model):
   def __init__(self):
@@ -114,9 +113,8 @@ if uploaded_file is not None:
   print("Precision = {}".format(precision_score(labels, predictions)))
   print("Recall = {}".format(recall_score(labels, predictions)))
 #   if st.button("Detect Anomaly"):
-  
   st.success("Anomaly = {}".format(accuracy_score(labels, predictions)))
-  
+  st.line_chart(dataframe)
 
  preds = predict(autoencoder, test_data, threshold)
  print_stats(preds, test_labels)
