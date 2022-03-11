@@ -114,7 +114,7 @@ if uploaded_file is not None:
   print("Recall = {}".format(recall_score(labels, predictions)))
 #   if st.button("Detect Anomaly"):
   st.success("Anomaly = {}".format(accuracy_score(labels, predictions)))
-#   st.line_chart(dataframe.head()) 
+  st.line_chart(dataframe.head()) 
 
  preds = predict(autoencoder, test_data, threshold)
  print_stats(preds, test_labels)
